@@ -11,15 +11,16 @@
         android:layout_width="match_parent"
         android:background="@android:color/white"
         android:layout_height="wrap_content">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/search_toolbar"
             android:layout_width="match_parent"
             android:layout_marginTop="4dp"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
-
             android:layout_height="50dp"
             android:background="@drawable/button_black_background">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -40,8 +41,11 @@
                     android:layout_toEndOf="@+id/search_fragment_icon"
                     android:hint="Search....."
                     android:textColor="@color/colorPrimary" />
+
             </RelativeLayout>
+
         </androidx.appcompat.widget.Toolbar>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView

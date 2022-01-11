@@ -15,25 +15,31 @@ class SigninActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
+// if user has no account then singUp fist
         signup_link_btn.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
+//*************************************************************************************
 
+// is user exist then logIn      ***********************************************
         login_btn.setOnClickListener {
             loginUser()
 
         }
+// *****************************************************************************
 
 
     }
 
+
+// loginUser logic                               *************************************************
     private fun loginUser() {
         val emaill = emaill_login.text.toString()
         val password = password_login.text.toString()
 
         when{
             TextUtils.isEmpty(emaill)-> Toast.makeText(this, "please enter your emaill" , Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(password)-> Toast.makeText(this, "creat password" , Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(password)-> Toast.makeText(this, "please enter crect password" , Toast.LENGTH_LONG).show()
 
             else -> {
                 val proogressDialog = ProgressDialog(this)
@@ -65,9 +71,11 @@ class SigninActivity : AppCompatActivity() {
             }
         }
     }
+//**********************************************************************************************************************
 
 
 
+//  open maneActivity alwale after one time logIn
     override fun onStart() {
         super.onStart()
 
@@ -79,4 +87,5 @@ class SigninActivity : AppCompatActivity() {
             finish()
         }
     }
+// **************************************************************************************************************************
 }

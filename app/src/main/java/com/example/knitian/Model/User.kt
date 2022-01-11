@@ -1,6 +1,7 @@
 package com.example.knitian.Model
 
 class User {
+
     private var username: String = ""
     private var fullname: String = ""
     private var bio: String = ""
@@ -8,10 +9,11 @@ class User {
     private var uid: String = ""
 
 
-    constructor()
+
+    constructor(){}
 
 
-    constructor(username: String, fullname: String, bio: String, image: String, uid: String)
+    constructor(username: String, fullname : String, bio: String, image: String, uid: String)
     {
         this.username = username
         this.fullname = fullname
@@ -60,12 +62,12 @@ class User {
         this.image = image
     }
 
-    fun getUid(): String
+    fun getUID(): String
     {
         return uid
     }
 
-    fun setUid(uid: String)
+    fun setUID(uid: String)
     {
         this.uid = uid
     }

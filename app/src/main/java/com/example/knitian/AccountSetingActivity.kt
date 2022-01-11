@@ -11,6 +11,7 @@ class AccountSetingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account_seting)
 
+// logOut user    *******************************************
         logout_btn_profile_frag.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
 
@@ -19,5 +20,6 @@ class AccountSetingActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+//**************************************************************************************************
     }
 }

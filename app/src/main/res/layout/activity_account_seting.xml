@@ -123,9 +123,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="6dp"
+        android:background="@color/colorPrimary"
         android:text="Delete Account"
         android:textAllCaps="false"
-        android:background="@color/colorPrimary"
-        android:textSize="16dp"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="16dp" />
 </RelativeLayout>
